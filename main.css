@@ -1,0 +1,131 @@
+/*--------------------------------------------------------------------
+                        BASE
+--------------------------------------------------------------------*/
+html, body {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.4;
+  height: 100% ;
+  
+
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+h1 {
+ margin-top: 0;
+}
+
+.site-content {
+  padding-top: 66px;
+}
+
+/*--------------------------------------------------------------------
+                        HEADER
+--------------------------------------------------------------------*/
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 66px;
+
+  line-height: 66px;
+  color: #FFF;
+
+  background-color: #2e7d32;
+}
+
+.header__logo {
+  font-weight: bold;
+  padding: 0 25px;
+  float: left;
+}
+
+/*--------------------------------------------------------------------
+                        MENU
+--------------------------------------------------------------------*/
+
+.menu {
+  float: left;
+}
+
+a {
+  padding: 0 10px;
+}
+a:hover {
+  color: #c6ff00
+}
+
+/*--------------------------------------------------------------------
+                        Responsive
+--------------------------------------------------------------------*/
+
+@media only screen and (max-width: 750px) {
+  .site-content {
+    padding-top: 0;
+  }
+  .header {
+    position: static;
+  }
+  .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 35px;
+    height: 66px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
+  }
+
+  .header__icon:after {
+    content:'';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    display: block;
+    width: 1rem;
+    height: 0;
+    box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #2a6e2d;
+    transform: translate(-250px);
+  }
+  
+  
+  .menu a {
+    display: block;
+    height: 40px;
+    padding: 10px;
+    
+    text-align: center;
+    line-height: 40px;
+    
+    border-bottom: 1px solid  #2e7d32;
+  }
+
+  /*--------------------------------------------------------------------
+                         Class JS
+--------------------------------------------------------------------*/
+  .visible {
+    transform:translate(0)
+  }
+  .visible-icon {
+    transform:translate(250px)
+  }
+  .hidden-scroll {
+    overflow-y: hidden;
+  }
+}
